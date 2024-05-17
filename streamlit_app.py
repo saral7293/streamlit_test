@@ -1,6 +1,5 @@
 import streamlit as st
 import requests
-import json
 
 st.title('Iris Flower Prediction')
 
@@ -19,4 +18,4 @@ if st.button('Predict'):
         prediction = response.json()['prediction']
         st.success(f'The predicted Iris class is: {prediction}')
     else:
-        st.error('Failed to get prediction')
+        st.error(f'Failed to get prediction: {response.text}')
