@@ -1,4 +1,4 @@
-streamlit
-requests
-scikit-learn
-flask
+streamlit==1.31.0
+requests==2.31.0
+scikit-learn==1.4.2
+Flask==3.0.3
