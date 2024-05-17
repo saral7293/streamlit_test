@@ -11,7 +11,7 @@ pl = st.slider('Petal Length', 1.0, 7.0, 1.4)
 pw = st.slider('Petal Width', 0.1, 2.5, 0.2)
 
 # Update this URL to point to your deployed Flask API
-url = 'https://flask-test-mcc8.onrender.com/predict'
+url = 'https://irisflask-test.onrender.com/predict'
 
 if st.button('Predict'):
     response = requests.post(url, json={'features': [sl, sw, pl, pw]})
