@@ -13,7 +13,13 @@ pw = st.slider('Petal Width', 0.1, 2.5, 0.2)
 url = 'https://irisflask-test.onrender.com/predict'
 
 if st.button('Predict'):
-    response = requests.post(url, json={'features': [sl, sw, pl, pw]})
+    data = {
+        'feature1': sl,
+        'feature2': sw,
+        'feature3': pl,
+        'feature4': pw
+    }
+    response = requests.post(url, json=data)
     if response.status_code == 200:
         prediction = response.json()['prediction']
         st.success(f'The predicted Iris class is: {prediction}')
